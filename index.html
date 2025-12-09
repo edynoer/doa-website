@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DOA GMF AeroAsia – Corporate Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="DOA GMF AeroAsia — Design Organization Approval certified by DGCA (DOA.21J.001 Class-C) and EASA (EASA.21J.565 Minor Changes & Minor Repair Designs). Aircraft engineering, cabin modification, and airworthiness design services."
+  />
+  <link rel="icon" type="image/png" href="assets/img/favicon-gmf.png" />
+
+  <style>
+    :root {
+      --color-bg: #0b1220;
+      --color-bg-soft: #111827;
+      --color-card: #020617;
+      /* GMF-ish: hijau & biru */
+      --color-accent: #00a651;
+      --color-accent-soft: rgba(0, 166, 81, 0.15);
+      --color-accent-strong: #0072bc;
+      --color-text: #f9fafb;
+      --color-text-soft: #9ca3af;
+      --color-border: #1f2937;
+      --color-gold: #fbbf24;
+      --max-width: 1120px;
+      --radius-xl: 18px;
+      --radius-2xl: 26px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.75);
+      --transition-fast: 180ms ease-out;
+      --transition-med: 220ms ease-out;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0, #020617 55%);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.96),
+        rgba(15, 23, 42, 0.85),
+        transparent
+      );
+      border-bottom: 1px solid rgba(31, 41, 55, 0.7);
+      z-index: 20;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #fbbf24, #00a651 55%, #020617 100%);
+      box-shadow: 0 0 30px rgba(0, 166, 81, 0.7);
+    }
+
+    .brand-logo-img {
+      height: 28px;
+      width: auto;
+      display: block;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.05rem;
+    }
+
+    .brand-doa {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    .brand-sub {
+      font-size: 0.72rem;
+      color: var(--color-text-soft);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: var(--color-text-soft);
+      position: relative;
+      padding-bottom: 0.15rem;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(to right, var(--color-accent), var(--color-accent-strong));
+      transition: width var(--transition-fast);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-text);
+      background: radial-gradient(circle at top left, rgba(0, 166, 81, 0.2), transparent 55%);
+      transition: background var(--transition-fast), transform var(--transition-fast),
+        box-shadow var(--transition-fast), border-color var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      border-color: var(--color-accent);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
+      background: radial-gradient(circle at top left, rgba(248, 250, 252, 0.08), transparent 60%);
+    }
+
+    .hero {
+      padding: 3.5rem 0 2.5rem;
+    }
+
+    @media (min-width: 960px) {
+      .hero {
+        padding: 4.5rem 0 3.5rem;
+      }
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--color-accent);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 3vw + 1rem, 3.2rem);
+      line-height: 1.1;
+      margin: 0 0 0.9rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(to right, #e5e7eb, var(--color-accent-strong));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      color: var(--color-text-soft);
+      font-size: 0.98rem;
+      max-width: 32rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge {
+      padding: 0.28rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-text-soft);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .badge-accent {
+      border-color: rgba(0, 166, 81, 0.8);
+      background: var(--color-accent-soft);
+      color: #dcfce7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 0.6rem 1.35rem;
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+        border-color var(--transition-fast), background var(--transition-fast),
+        color var(--transition-fast);
+    }
+
+    .btn-primary {
+      background: linear-gradient(to right, #00a651, #0072bc);
+      color: #0b1120;
+      font-weight: 600;
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.85);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 60px rgba(15, 23, 42, 0.95);
+      background: linear-gradient(to right, #22c55e, #38bdf8);
+    }
+
+    .btn-ghost {
+      border-color: rgba(148, 163, 184, 0.4);
+      color: var(--color-text-soft);
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--color-accent);
+      color: var(--color-text);
+      background: rgba(15, 23, 42, 0.95);
+      transform: translateY(-1px);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.95);
+    }
+
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-top: 1.4rem;
+      font-size: 0.8rem;
+      color: var(--color-text-soft);
+    }
+
+    .metric { min-width: 110px; }
+
+    .metric strong {
+      display: block;
+      font-size: 1.2rem;
+      color: #e5e7eb;
+    }
+
+    .hero-visual { position: relative; }
+
+    .hero-panel {
+      background: radial-gradient(circle at top left, rgba(0, 166, 81, 0.25), transparent 55%),
+        linear-gradient(to bottom right, #020617, #020617);
+      border-radius: var(--radius-2xl);
+      padding: 1.5rem 1.4rem;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.1rem;
+      font-size: 0.8rem;
+      color: var(--color-text-soft);
+    }
+
+    .hero-panel-title {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #e5e7eb;
+    }
+
+    .hero-lights {
+      display: flex;
+      gap: 0.35rem;
+    }
+
+    .light {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.4);
+    }
+
+    .light-primary {
+      background: #22c55e;
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.8);
+    }
+
+    .hero-panel-body {
+      font-size: 0.78rem;
+      color: var(--color-text-soft);
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: 0.5rem 0 0.85rem;
+    }
+
+    .chip {
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .chip-accent {
+      border-color: rgba(0, 166, 81, 0.85);
+      background: rgba(6, 78, 59, 0.9);
+      color: #bbf7d0;
+    }
+
+    .hero-list {
+      list-style: none;
+      margin: 0.4rem 0 0;
+      padding: 0;
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .hero-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 999px;
+      padding: 0.38rem 0.6rem 0.38rem 0.75rem;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(31, 41, 55, 0.9);
+    }
+
+    .hero-list span { font-size: 0.74rem; }
+
+    .hero-badge-small {
+      font-size: 0.68rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(22, 163, 74, 0.12);
+      color: #bbf7d0;
+      border: 1px solid rgba(34, 197, 94, 0.4);
+    }
+
+    .hero-orbit {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .hero-orbit-ring {
+      position: absolute;
+      width: 230%;
+      height: 230%;
+      border-radius: 999px;
+      border: 1px dashed rgba(148, 163, 184, 0.14);
+      top: 10%;
+      left: -55%;
+      transform: rotate(6deg);
+    }
+
+    .hero-orbit-dot {
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--color-accent);
+      box-shadow: 0 0 18px rgba(0, 166, 81, 0.9);
+      top: 26%;
+      right: 11%;
+    }
+
+    section {
+      padding: 2.5rem 0 2.5rem;
+    }
+
+    @media (min-width: 960px) {
+      section {
+        padding: 3rem 0 3rem;
+      }
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1.6rem;
+      gap: 1rem;
+    }
+
+    .section-kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      margin: 0;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--color-text-soft);
+      max-width: 28rem;
+    }
+
+    .grid { display: grid; gap: 1.1rem; }
+
+    @media (min-width: 768px) {
+      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (min-width: 1040px) {
+      .grid-3-lg { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    .card {
+      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.85), #020617);
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(31, 41, 55, 0.95);
+      padding: 1.1rem 1.15rem;
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.9);
+      transition: transform var(--transition-med), box-shadow var(--transition-med),
+        border-color var(--transition-med), background var(--transition-med);
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 60px rgba(15, 23, 42, 0.95);
+      border-color: rgba(0, 166, 81, 0.7);
+      background: radial-gradient(circle at top left, rgba(0, 166, 81, 0.1), #020617);
+    }
+
+    .card-label {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--color-text-soft);
+      margin-bottom: 0.15rem;
+    }
+
+    .card-title {
+      font-size: 0.98rem;
+      margin: 0 0 0.4rem;
+      color: #e5e7eb;
+    }
+
+    .card-body {
+      font-size: 0.86rem;
+      color: var(--color-text-soft);
+    }
+
+    .card-list {
+      margin: 0.2rem 0 0;
+      padding-left: 1rem;
+      font-size: 0.85rem;
+      color: var(--color-text-soft);
+    }
+
+    .card-list li { margin-bottom: 0.16rem; }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.5rem;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      color: var(--color-text-soft);
+    }
+
+    .tag-gold {
+      border-color: rgba(251, 191, 36, 0.7);
+      color: #fef3c7;
+      background: rgba(120, 53, 15, 0.55);
+    }
+
+    .process {
+      display: grid;
+      gap: 1.1rem;
+    }
+
+    @media (min-width: 800px) {
+      .process { grid-template-columns: 1.4fr 1fr; }
+    }
+
+    .process-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .process-step {
+      display: flex;
+      gap: 0.7rem;
+      border-radius: 999px;
+      padding: 0.55rem 0.75rem;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(31, 41, 55, 0.95);
+      font-size: 0.85rem;
+      align-items: center;
+    }
+
+    .process-index {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: var(--color-text-soft);
+    }
+
+    .process-text { flex: 1; }
+
+    .process-text strong {
+      display: block;
+      font-size: 0.86rem;
+      color: #e5e7eb;
+    }
+
+    .process-note {
+      font-size: 0.84rem;
+      color: var(--color-text-soft);
+      margin-top: 0.85rem;
+    }
+
+    .process-panel {
+      border-radius: var(--radius-xl);
+      border: 1px dashed rgba(148, 163, 184, 0.6);
+      padding: 0.85rem 0.9rem;
+      background: radial-gradient(circle at top left, rgba(0, 166, 81, 0.1), #020617);
+      font-size: 0.82rem;
+      color: var(--color-text-soft);
+    }
+
+    .process-panel-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: #e5e7eb;
+    }
+
+    .contact {
+      display: grid;
+      gap: 1.3rem;
+    }
+
+    @media (min-width: 800px) {
+      .contact { grid-template-columns: 1.1fr 1fr; }
+    }
+
+    .contact-form {
+      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.9), #020617);
+      border-radius: var(--radius-xl);
+      padding: 1.3rem 1.3rem;
+      border: 1px solid rgba(31, 41, 55, 0.98);
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.95);
+    }
+
+    .form-row {
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    @media (min-width: 720px) {
+      .form-row-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-size: 0.84rem;
+    }
+
+    .field label { color: var(--color-text-soft); }
+
+    .field input,
+    .field textarea,
+    .field select {
+      border-radius: 0.75rem;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--color-text);
+      padding: 0.55rem 0.7rem;
+      font-size: 0.86rem;
+      outline: none;
+      transition: border-color var(--transition-fast),
+        box-shadow var(--transition-fast), background var(--transition-fast);
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: rgba(148, 163, 184, 0.65);
+    }
+
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 1px rgba(0, 166, 81, 0.5);
+      background: rgba(15, 23, 42, 1);
+    }
+
+    .field-support {
+      font-size: 0.76rem;
+      color: var(--color-text-soft);
+    }
+
+    .contact-info {
+      font-size: 0.88rem;
+      color: var(--color-text-soft);
+    }
+
+    .contact-info-block { margin-bottom: 1rem; }
+
+    .contact-info-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #e5e7eb;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact-tag {
+      font-size: 0.76rem;
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .qr-placeholder {
+      margin-top: 0.8rem;
+      width: 120px;
+      height: 120px;
+      border-radius: 1.1rem;
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--color-text-soft);
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    footer {
+      margin-top: auto;
+      border-top: 1px solid rgba(31, 41, 55, 0.8);
+      background: rgba(15, 23, 42, 0.98);
+      padding: 1.2rem 0 1.6rem;
+      font-size: 0.8rem;
+      color: var(--color-text-soft);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .mt-sm { margin-top: 0.4rem; }
+    .mt-md { margin-top: 0.8rem; }
+    .text-accent { color: var(--color-accent); }
+    .text-soft { color: var(--color-text-soft); }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.76rem;
+      border-radius: 999px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      padding: 0.18rem 0.65rem;
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.8);
+    }
+
+    @media (max-width: 720px) {
+      nav ul { display: none; }
+      .brand-logo-img { height: 24px; }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (href && href.length > 1) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="page">
+    <!-- Header / Navbar -->
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <div class="brand">
+            <div class="brand-mark"></div>
+            <div style="display:flex;align-items:center;gap:0.5rem;min-width:0;">
+              <!-- Ganti src dengan file logo GMF Anda -->
+              <img
+                src="assets/img/Logo_DOA.png"
+                alt="GMF AeroAsia Logo"
+                class="brand-logo-img"
+              />
+              <div class="brand-text">
+                <div class="brand-doa">DOA GMF AEROASIA</div>
+                <div class="brand-sub">Design Organization Approval</div>
+              </div>
+            </div>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#certifications">Certifications</a></li>
+              <li><a href="#capabilities">Capabilities</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#insights">Insights</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <a href="#contact" class="nav-cta">Contact Team</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-inner">
+            <div>
+              <div class="hero-kicker">DOA GMF AeroAsia</div>
+              <h1 class="hero-title">
+                Engineering Excellence in
+                <span>Design Organization Approval &amp; Airworthiness Compliance</span>
+              </h1>
+              <p class="hero-subtitle">
+                DOA GMF AeroAsia is certified by the Indonesian DGCA
+                (<strong>DOA.21J.001 – Class-C</strong>) and the European Union Aviation Safety Agency
+                (<strong>EASA.21J.565 – Minor Changes &amp; Minor Repair Designs</strong>), delivering
+                traceable and compliant aircraft design solutions for global operators.
+              </p>
+
+              <div class="hero-badges">
+                <span class="badge badge-accent">DGCA – DOA.21J.001 (Class-C)</span>
+                <span class="badge">EASA – EASA.21J.565</span>
+                <span class="badge">Minor Change &amp; Minor Repair</span>
+                <span class="badge">Cabin · Structures · Systems</span>
+              </div>
+
+              <div class="hero-actions">
+                <a href="#contact" class="btn-primary">
+                  Speak to DOA Engineers
+                  <span>→</span>
+                </a>
+                <a href="#capabilities" class="btn-ghost">View Capabilities</a>
+              </div>
+
+              <div class="hero-metrics">
+                <div class="metric">
+                  <strong>20+ </strong>
+                  Delivered cabin &amp; configuration projects.
+                </div>
+                <div class="metric">
+                  <strong>Multi-OEM</strong>
+                  Experience on B737, B777, A330, A320.
+                </div>
+                <div class="metric">
+                  <strong>100%</strong>
+                  Compliance-focused design assurance.
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-visual">
+              <div class="hero-panel">
+                <div class="hero-panel-header">
+                  <div>
+                    <div class="hero-panel-title">DOA Approvals Snapshot</div>
+                    <div style="font-size: 0.7rem" class="text-soft">
+                      DOA GMF AeroAsia – Certification Overview
+                    </div>
+                  </div>
+                  <div class="hero-lights">
+                    <div class="light light-primary"></div>
+                    <div class="light"></div>
+                    <div class="light"></div>
+                  </div>
+                </div>
+                <div class="hero-panel-body">
+                  <div class="chip-row">
+                    <span class="chip chip-accent">DGCA DOA.21J.001</span>
+                    <span class="chip">EASA.21J.565</span>
+                    <span class="chip">Class-C</span>
+                    <span class="chip">Minor Change/Repair</span>
+                  </div>
+
+                  <ul class="hero-list">
+                    <li>
+                      <span>Cabin &amp; LOPA Engineering</span>
+                      <span class="hero-badge-small">Approved Scope</span>
+                    </li>
+                    <li>
+                      <span>Minor Change (EASA)</span>
+                      <span class="hero-badge-small">In-Scope</span>
+                    </li>
+                    <li>
+                      <span>Minor Repair (EASA)</span>
+                      <span class="hero-badge-small">In-Scope</span>
+                    </li>
+                  </ul>
+
+                  <p class="mt-md">
+                    DOA GMF AeroAsia maintains a structured Design Assurance System integrating engineering,
+                    airworthiness, and independent monitoring — ensuring every output is auditable and compliant.
+                  </p>
+                </div>
+                <div class="hero-orbit">
+                  <div class="hero-orbit-ring"></div>
+                  <div class="hero-orbit-dot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">About DOA GMF AeroAsia</div>
+              <h2 class="section-title">Who We Are</h2>
+            </div>
+            <div class="section-subtitle">
+              DOA GMF AeroAsia is a certified Design Organization providing safe, compliant, and efficient
+              engineering solutions through a fully established Design Assurance System.
+            </div>
+          </div>
+
+          <div class="grid grid-2">
+            <div class="card">
+              <div class="card-label">Profile</div>
+              <h3 class="card-title">Design &amp; Airworthiness Competence</h3>
+              <p class="card-body">
+                As a certified DOA, GMF AeroAsia supports airlines, lessors, MROs, and government operators in
+                delivering compliant aircraft modifications, cabin changes, and technical evaluations.
+              </p>
+              <p class="card-body mt-sm">
+                Our engineering decisions are grounded in
+                <span class="text-accent">safety, regulatory compliance, and design integrity.</span>
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-label">Vision &amp; Values</div>
+              <h3 class="card-title">Vision, Mission &amp; Core Values</h3>
+              <ul class="card-list">
+                <li><strong>Vision:</strong> To become the region’s trusted DOA partner for design &amp; certification.</li>
+                <li><strong>Mission:</strong> Deliver traceable, accountable, and compliant designs.</li>
+                <li><strong>Values:</strong> Integrity, Compliance, Expertise, Customer Focus.</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Safety First</span>
+                <span class="tag">Design Assurance</span>
+                <span class="tag">Regulatory Compliance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section id="certifications">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Certifications</div>
+              <h2 class="section-title">Formal Design Organization Approvals</h2>
+            </div>
+            <div class="section-subtitle">
+              DOA GMF AeroAsia operates under approvals granted by the Indonesian DGCA and EASA.
+            </div>
+          </div>
+
+          <div class="grid grid-2">
+            <div class="card">
+              <div class="card-label">DGCA Approval</div>
+              <h3 class="card-title">DGCA Design Organization Approval – DOA.21J.001 (Class-C)</h3>
+              <p class="card-body">
+                The Indonesian Directorate General of Civil Aviation (DGCA) grants DOA GMF AeroAsia approval
+                DOA.21J.001 with Class-C scope, authorizing:
+              </p>
+              <ul class="card-list">
+                <li>Cabin interior changes &amp; LOPA updates</li>
+                <li>Seat installation &amp; reconfiguration</li>
+                <li>Cargo &amp; cabin safety equipment assessment</li>
+                <li>Supporting analysis &amp; compliance documentation</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag-gold">DGCA Approved</span>
+                <span class="tag">Class-C DOA</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-label">EASA Approval</div>
+              <h3 class="card-title">
+                EASA Part 21.J – EASA.21J.565 (Minor Changes &amp; Minor Repair Designs)
+              </h3>
+              <p class="card-body">
+                EASA approval EASA.21J.565 authorizes DOA GMF AeroAsia to perform:
+              </p>
+              <ul class="card-list">
+                <li>Minor Change design &amp; substantiation</li>
+                <li>Minor Repair development &amp; justification</li>
+                <li>MoC definition &amp; compliance verification</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag-gold">EASA Approved</span>
+                <span class="tag">Minor Change</span>
+                <span class="tag">Minor Repair</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Capabilities -->
+      <section id="capabilities">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Capabilities</div>
+              <h2 class="section-title">Engineering &amp; Airworthiness Services</h2>
+            </div>
+            <div class="section-subtitle">
+              DOA GMF AeroAsia offers integrated engineering support across cabin, structures, systems,
+              airworthiness, and compliance.
+            </div>
+          </div>
+
+          <div class="grid grid-3 grid-3-lg">
+            <div class="card">
+              <div class="card-label">Cabin &amp; LOPA</div>
+              <h3 class="card-title">Cabin &amp; Interior Engineering</h3>
+              <ul class="card-list">
+                <li>LOPA development and revision</li>
+                <li>Seat installation &amp; reconfiguration</li>
+                <li>Galley, lavatory, &amp; stowage evaluations</li>
+                <li>Emergency &amp; safety equipment layouts</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Cabin Layout</span>
+                <span class="tag">LOPA</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-label">Structures</div>
+              <h3 class="card-title">Structural Engineering</h3>
+              <ul class="card-list">
+                <li>Minor structural modification evaluation</li>
+                <li>Bracket &amp; reinforcement justification</li>
+                <li>Installation impact assessment</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Structural Justification</span>
+                <span class="tag">Installations</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-label">Systems</div>
+              <h3 class="card-title">Systems &amp; Electrical</h3>
+              <ul class="card-list">
+                <li>Minor avionics &amp; system support</li>
+                <li>Electrical load &amp; interface review</li>
+                <li>Basic wiring integration study</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Electrical</span>
+                <span class="tag">Avionics</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-label">Airworthiness</div>
+              <h3 class="card-title">Airworthiness &amp; Compliance</h3>
+              <ul class="card-list">
+                <li>Compliance demonstration (Part 21)</li>
+                <li>HIRAM, FMEA, SSA</li>
+                <li>Voluntary reporting integration</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Compliance</span>
+                <span class="tag">SMS Integration</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-label">Documentation</div>
+              <h3 class="card-title">Technical Documentation &amp; ICA</h3>
+              <ul class="card-list">
+                <li>ICA development</li>
+                <li>AFM/FCOM supplements</li>
+                <li>Configuration &amp; reliability inputs</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">ICA</span>
+                <span class="tag">Manuals</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-label">Advisory</div>
+              <h3 class="card-title">Consulting &amp; Advisory</h3>
+              <ul class="card-list">
+                <li>DOA readiness &amp; system development</li>
+                <li>Safety integration (SMS)</li>
+                <li>Leasing &amp; phase-in support</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">Advisory</span>
+                <span class="tag">DOA System</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="portfolio">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Portfolio</div>
+              <h2 class="section-title">Selected Projects &amp; Track Record</h2>
+            </div>
+            <div class="section-subtitle">
+              DOA GMF AeroAsia has delivered multiple successful design projects across various aircraft platforms.
+            </div>
+          </div>
+
+          <div class="grid grid-2">
+            <div class="card">
+              <div class="card-label">Cabin Projects</div>
+              <h3 class="card-title">Seat Configuration &amp; LOPA</h3>
+              <ul class="card-list">
+                <li>Boeing 737 – cabin re-layout &amp; LOPA updates</li>
+                <li>Boeing 777 – business class seat integration</li>
+                <li>Airbus A330 – cabin reconfiguration</li>
+                <li>Airbus A320 – pitch optimization &amp; interior adjustments</li>
+              </ul>
+              <p class="card-body mt-sm">
+                Each project is executed with full traceability under DOA procedures.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-label">Outcomes</div>
+              <h3 class="card-title">Customer Benefits</h3>
+              <ul class="card-list">
+                <li>Improved cabin efficiency with maintained compliance</li>
+                <li>Reduced approval lead time using in-house DOA</li>
+                <li>Harmonized layout across fleets</li>
+                <li>Complete documentation package for regulators &amp; operators</li>
+              </ul>
+              <div class="tag-row">
+                <span class="tag">B737</span>
+                <span class="tag">B777</span>
+                <span class="tag">A320</span>
+                <span class="tag">A330</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section id="process">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Process</div>
+              <h2 class="section-title">How DOA GMF AeroAsia Works</h2>
+            </div>
+            <div class="section-subtitle">
+              Every change is assessed, justified, and approved within a controlled Design Assurance System.
+            </div>
+          </div>
+
+          <div class="process">
+            <div>
+              <ul class="process-list">
+                <li class="process-step">
+                  <div class="process-index">01</div>
+                  <div class="process-text">
+                    <strong>Requirement Review</strong>
+                    <span>Understanding objectives, constraints, and applicable regulations.</span>
+                  </div>
+                </li>
+                <li class="process-step">
+                  <div class="process-index">02</div>
+                  <div class="process-text">
+                    <strong>Feasibility &amp; Classification</strong>
+                    <span>Assess technical feasibility &amp; classify change (major/minor).</span>
+                  </div>
+                </li>
+                <li class="process-step">
+                  <div class="process-index">03</div>
+                  <div class="process-text">
+                    <strong>Design &amp; Engineering</strong>
+                    <span>Prepare engineering data, drawings, and analysis under DOA procedures.</span>
+                  </div>
+                </li>
+                <li class="process-step">
+                  <div class="process-index">04</div>
+                  <div class="process-text">
+                    <strong>Compliance Mapping</strong>
+                    <span>Define MoC, conduct safety assessments, and gather evidence.</span>
+                  </div>
+                </li>
+                <li class="process-step">
+                  <div class="process-index">05</div>
+                  <div class="process-text">
+                    <strong>Approval &amp; Release</strong>
+                    <span>Prepare DOA approval package for authority or operator acceptance.</span>
+                  </div>
+                </li>
+              </ul>
+              <p class="process-note">
+                <span class="pill">
+                  <span class="badge-dot"></span>
+                  Traceable &amp; auditable at every stage
+                </span>
+              </p>
+            </div>
+
+            <div class="process-panel">
+              <div class="process-panel-title">Design Assurance Mindset</div>
+              <p>Our DOA integrates:</p>
+              <ul class="card-list">
+                <li>Clear engineering responsibilities</li>
+                <li>Independent monitoring and formal review stages</li>
+                <li>Integrated safety risk assessments</li>
+              </ul>
+              <p class="mt-sm">
+                Ensuring all released designs are technically sound and fully compliant.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Insights -->
+      <section id="insights">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Insights</div>
+              <h2 class="section-title">Knowledge &amp; Thought Leadership</h2>
+            </div>
+            <div class="section-subtitle">
+              Sharing regulatory perspectives and engineering practices relevant to design &amp; airworthiness.
+            </div>
+          </div>
+
+          <div class="grid grid-3">
+            <div class="card">
+              <div class="card-label">Article</div>
+              <h3 class="card-title">Understanding “Minor Change” Under EASA 21.J</h3>
+              <p class="card-body">
+                How EASA classifies minor changes and what it means for operators.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-label">Article</div>
+              <h3 class="card-title">The Role of LOPA in Cabin Safety</h3>
+              <p class="card-body">
+                LOPA is more than a layout — it affects evacuation, safety equipment, and limitations.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-label">Article</div>
+              <h3 class="card-title">Integrating SMS Into Design Activities</h3>
+              <p class="card-body">
+                Embedding hazard identification and risk assessment into engineering workflows.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Contact</div>
+              <h2 class="section-title">Connect with DOA GMF AeroAsia</h2>
+            </div>
+            <div class="section-subtitle">
+              Share your requirements and our engineering team will provide structured support.
+            </div>
+          </div>
+
+          <div class="contact">
+            <div class="contact-form">
+              <form>
+                <div class="form-row form-row-2">
+                  <div class="field">
+                    <label for="name">Full Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" />
+                  </div>
+                  <div class="field">
+                    <label for="company">Company / Operator</label>
+                    <input
+                      id="company"
+                      name="company"
+                      type="text"
+                      placeholder="Organization name"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row form-row-2 mt-md">
+                  <div class="field">
+                    <label for="email">Business Email</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="name@company.com"
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="scope">Support Needed</label>
+                    <select id="scope" name="scope">
+                      <option value="">Select…</option>
+                      <option>Cabin / LOPA Engineering</option>
+                      <option>Minor Change / Minor Repair</option>
+                      <option>Structural / Systems Support</option>
+                      <option>Documentation &amp; ICA</option>
+                      <option>DOA / SMS Consulting</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row mt-md">
+                  <div class="field">
+                    <label for="message">Project Brief</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      placeholder="Describe aircraft type, modification scope, and timeline."
+                    ></textarea>
+                    <div class="field-support">
+                      For confidential details, a secure channel can be arranged after initial contact.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row mt-md">
+                  <button type="submit" class="btn-primary">
+                    Submit Inquiry
+                    <span>→</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div class="contact-info">
+              <div class="contact-info-block">
+                <div class="contact-info-title">Business Contact</div>
+                <p>
+                  <strong>Email:</strong> doa.business@gmf-aeroasia.co.id<br />
+                  <strong>Phone:</strong> +62-xxx-xxxx-xxxx
+                </p>
+                <div class="contact-tags">
+                  <span class="contact-tag">DGCA DOA.21J.001</span>
+                  <span class="contact-tag">EASA.21J.565</span>
+                  <span class="contact-tag">Design Organization Approval</span>
+                </div>
+              </div>
+
+              <div class="contact-info-block">
+                <div class="contact-info-title">Quick Access</div>
+                <p>
+                  You may route inquiries directly to DOA focal points as per
+                  official communication channels.
+                </p>
+                <div class="qr-placeholder">
+                  QR / WhatsApp<br />placeholder
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div>© <span id="year"></span> DOA GMF AeroAsia. All rights reserved.</div>
+          <div class="footer-links">
+            <span>Design Organization Approval · DGCA DOA.21J.001 · EASA.21J.565</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
